@@ -1,8 +1,5 @@
 package com.awscode.inc.employees.model;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,10 +10,10 @@ import javax.persistence.Table;
 @Table(name = "employees")
 public class Employee {
 	
-	private String id;
+	private long id;
 	private String name;
-	private Date bornDate;
-	private BigDecimal salary;
+	private String bornDate;
+	private String salary;
 	private String position;
 	
 	
@@ -24,7 +21,7 @@ public class Employee {
 		
 	}
 	
-	public Employee(String id, String name, Date bornDate, BigDecimal salary, String position) {
+	public Employee(long id, String name, String bornDate, String salary, String position) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -35,11 +32,11 @@ public class Employee {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public String getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	
@@ -49,16 +46,16 @@ public class Employee {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getBornDate() {
+	public String getBornDate() {
 		return bornDate;
 	}
-	public void setBornDate(Date bornDate) {
+	public void setBornDate(String bornDate) {
 		this.bornDate = bornDate;
 	}
-	public BigDecimal getSalary() {
+	public String getSalary() {
 		return salary;
 	}
-	public void setSalary(BigDecimal salary) {
+	public void setSalary(String salary) {
 		this.salary = salary;
 	}
 	public String getPosition() {
