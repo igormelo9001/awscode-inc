@@ -18,10 +18,9 @@ Formato de requisição JSON
 
 @Post
 {
-        "id": 2,
         "name": "Igor melo",
         "bornDate": "1990-01-25",
-        "salary": 1000.0,
-        "position": "q"
+        "salary": 2500.0,
+        "position": "desenvolvedor java"
 }
 
